@@ -1,0 +1,170 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600&display=swap');
+
+:root {
+	--carrot-color: #e67e22;
+	--black: #130f40;
+	--white: #fff;
+	--light-color: #666;
+	--light-bg: #eee;
+	--border: 0.2s solid var(var(--black));
+	--box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.1);
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Poppins', sans-serif;
+	outline: none;
+	border: none;
+	text-decoration: none;
+	text-transform: capitalize;
+	transition: 0.2s ease-in-out;
+}
+
+/* 
+@mixin grid($val){
+    display:grid;
+    grid-template-columns:repeat(auto-fit,(minmax($val,1fr)));
+    gap:1.5rem;
+}
+*/
+
+html {
+	font-size: 62.5%;
+	overflow-x: hidden;
+	scroll-behavior: smooth;
+	scroll-padding: 4rem;
+}
+
+.header {
+	/* background: var(--white); */
+	/* background: red; */
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 2rem 9%;
+	box-shadow: var(--box-shadow);
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	z-index: 1000;
+}
+
+.header__enlace {
+	font-size: 2.5rem;
+	color: var(--black);
+	font-weight: bolder;
+}
+
+.header__logo i {
+	font-size: 2.5rem;
+	font-weight: bolder;
+
+	color: var(--carrot-color);
+}
+
+.header__link {
+	font-size: 16px;
+}
+
+.header__links {
+	color: var(--light-color);
+	margin: 0 1rem;
+}
+
+.header__links:hover {
+	color: var(--carrot-color);
+}
+
+.nav__icons a,
+.nav__icons div {
+	font-size: 2.5rem;
+	color: var(--black);
+	cursor: pointer;
+	margin: 0 1rem;
+}
+
+.nav__icons a:hover,
+.nav__icons div:hover {
+	color: var(--carrot-color);
+}
+
+#menu-btn {
+	display: none;
+}
+
+.form {
+	display: flex;
+	flex-direction: column;
+	border-radius: 5px;
+	padding: 2.5rem;
+	position: absolute;
+	top: 120px;
+	right: 150px;
+	background: var(--light-bg);
+}
+
+.form__title {
+	font-size: 25px;
+}
+
+.form__input {
+	text-transform: none;
+	margin: 2.2rem 0;
+	background: transparent;
+	height: 25px;
+	border-bottom: 1px solid var(--black);
+}
+
+.form__remember {
+	display: flex;
+	font-size: 13px;
+	align-items: center;
+	gap: 0.5rem;
+}
+
+/* .form__remember > * {
+	margin: 0 0.5rem;
+} */
+
+.form__sing {
+	border-radius: 3px 50px 50px 50px;
+	padding: 0.5rem;
+	margin: 2rem 0.5rem;
+	border: 2px solid var(--black);
+	cursor: pointer;
+	position: relative;
+}
+
+.form__sing::before {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	background: var(--black);
+	z-index: -1;
+	transition: 0.3s linear;
+	clip-path: circle(0% at 0% 5%);
+	border-radius: 3px 50px 50px 50px;
+	color: var(--black);
+}
+
+.form__sing:hover::before {
+	clip-path: circle(100%);
+	z-index: 10;
+	color: var(--light-bg);
+}
+
+.form__btn {
+	display: flex;
+	justify-content: space-between;
+}
+.form__btns {
+	color: var(--carrot-color);
+	cursor: pointer;
+	padding: 1.5rem;
+}
