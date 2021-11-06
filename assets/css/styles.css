@@ -202,7 +202,7 @@ html {
 	height: 100vh;
 	display: flex;
 	align-items: center;
-	/* background-image: url('/assets/img/home_bg_img.png'); */
+	background-image: url('../img/home_bg_img.png');
 	background-position: center;
 	background-size: cover;
 	justify-content: flex-end;
