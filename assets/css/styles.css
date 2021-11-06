@@ -6,7 +6,7 @@
 	--white: #fff;
 	--light-color: #666;
 	--light-bg: #eee;
-	--border: 0.2s solid var(var(--black));
+	--border: 0.2s solid #130f40;
 	--box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.1);
 }
 
@@ -37,8 +37,12 @@ html {
 	scroll-padding: 4rem;
 }
 
+/* ------------------------------ */
+/* HEADER START*/
+/* ------------------------------ */
+
 .header {
-	/* background: var(--white); */
+	background: var(--white);
 	/* background: red; */
 	display: flex;
 	align-items: center;
@@ -50,6 +54,11 @@ html {
 	left: 0;
 	right: 0;
 	z-index: 1000;
+	transform: translateY(-10rem);
+}
+
+.header--active {
+	transform: translateY(0rem);
 }
 
 .header__enlace {
@@ -96,14 +105,18 @@ html {
 }
 
 .form {
-	display: flex;
 	flex-direction: column;
 	border-radius: 5px;
 	padding: 2.5rem;
 	position: absolute;
-	top: 120px;
-	right: 150px;
-	background: var(--light-bg);
+	top: 90px;
+	right: 35px;
+	background: var(--white);
+	display: none;
+}
+
+.form--active {
+	display: flex;
 }
 
 .form__title {
@@ -150,13 +163,14 @@ html {
 	transition: 0.3s linear;
 	clip-path: circle(0% at 0% 5%);
 	border-radius: 3px 50px 50px 50px;
-	color: var(--black);
 }
 
-.form__sing:hover::before {
+.form__sing:hover {
 	clip-path: circle(100%);
 	z-index: 10;
+	background: var(--black);
 	color: var(--light-bg);
+	box-shadow: var(--box-shadow);
 }
 
 .form__btn {
@@ -167,4 +181,54 @@ html {
 	color: var(--carrot-color);
 	cursor: pointer;
 	padding: 1.5rem;
+}
+
+/* 25:15 */
+.form__btns:hover {
+	color: var(--black);
+	text-decoration: underline;
+}
+
+/* ------------------------------ */
+/* HEADER END*/
+/* ------------------------------ */
+
+/* ------------------------------ */
+/* HOME SECTION START*/
+/* ------------------------------ */
+
+/* ------------------------------ */
+/* HOME SECTION END*/
+/* ------------------------------ */
+
+/* Media querys */
+@media (max-width: 950px) {
+	.header__link {
+		font-size: 15px;
+		color: salmon;
+	}
+
+	#menu-btn {
+		display: inline-block;
+	}
+}
+
+@media (max-width: 850px) {
+	.header__link {
+		position: absolute;
+		top: 77px;
+		width: 100%;
+		left: 0;
+		flex-direction: column;
+		padding: 10px;
+		background: var(--white);
+		display: none;
+	}
+
+	.header__links {
+		padding: 5px;
+	}
+	.header--active {
+		display: flex;
+	}
 }
