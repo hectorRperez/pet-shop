@@ -302,7 +302,7 @@ html {
 
 	.home {
 		align-items: center;
-		background-image: url('./assets/img/home_bg_img.jpg');
+		background-image: url('/assets/img/home_bg_img.jpg');
 		background-position: right;
 		background-size: cover;
 		justify-content: center;
